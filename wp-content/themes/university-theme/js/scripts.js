@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom'
+
 import "../css/style.css"
 
 // Our modules /  classes
@@ -15,6 +18,16 @@ const googleMap = new GoogleMap()
 const search = new Search()
 const myNotes = new MyNotes()
 const like = new Like()
+
+function OurFirstComponent() {
+  return (
+    <div>
+      <h1>Hello World</h1>
+      <p>life is good</p>
+    </div>
+  )
+}
+ReactDOM.render(<OurFirstComponent />, document.getElementById('app'))
 
 // Allow new JS and CSS to load in browser without a traditional page refresh
 if (module.hot) {

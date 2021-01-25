@@ -162,6 +162,12 @@ function ignoreCertainFiles($exclude_filters) {
   return $exclude_filters;
 }
 
+function universityQueryVars($vars) {
+  $vars[] = 'skyColor';
+  $vars[] = 'grassColor';
+  return $vars;
+}
+
 add_action('wp_enqueue_scripts', 'university_files');
 add_action('after_setup_theme', 'university_features');
 add_action('pre_get_posts', 'university_adjust_queries');
@@ -175,3 +181,4 @@ add_filter('login_headerurl', 'ourHeaderUrl');
 add_filter('login_headertitle', 'ourLoginTitle');
 add_filter('wp_insert_post_data', 'makeNotePrivate', 10, 2);
 add_filter('ai1wm_exclude_content_from_export', 'ignoreCertainFiles');
+add_filter('query_vars', 'universityQueryVars');

@@ -23,7 +23,7 @@
 if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
 	define( 'DB_NAME', 'university' );
 	define( 'DB_USER', 'admin' );
-	define( 'DB_PASSWORD', 'abcdef' );
+	define( 'DB_PASSWORD', '123456' );
 	define( 'DB_HOST', 'localhost' );
 } else {
 	define( 'DB_NAME', 'host_db' );
